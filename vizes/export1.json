@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "566f21e0-8202-11e9-aa3c-e3ebd7744105",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric 2.1",
+      "visState": "{\"title\":\"Metric 2.1\",\"type\":\"timelion\",\"params\":{\"expression\":\".sum( .sum(.multiply( .es(q=severity:1, metric=sum:bytes_toclient, index=tst_breakup_02), 1 ), .multiply( .es(q=severity:2, metric=sum:bytes_toclient, index=tst_breakup_02),2 ) ), \\n          .sum(.multiply( .es(q=severity:3, metric=sum:bytes_toclient, index=tst_breakup_02), 3), .multiply( .es(q=severity:4, metric=sum:bytes_toclient, index=tst_breakup_02),4 ) ) )\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "ad2abc90-8204-11e9-aa3c-e3ebd7744105",
+    "_type": "visualization",
+    "_source": {
+      "title": "Total Packets to Client by Alert",
+      "visState": "{\"title\":\"Total Packets to Client by Alert\",\"type\":\"timelion\",\"params\":{\"expression\":\".es( q=*, split=alert:2, metric=sum:pkts_toclient, index=tst_breakup_02).label(regex='.* alert:(.*) > .*', label='$1')\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "8fd19d30-8204-11e9-aa3c-e3ebd7744105",
+    "_type": "visualization",
+    "_source": {
+      "title": "Total Packets to Client by Protocol",
+      "visState": "{\"title\":\"Total Packets to Client by Protocol\",\"type\":\"timelion\",\"params\":{\"expression\":\".es( q=*, split=protcol.keyword:2, metric=sum:pkts_toclient, index=tst_breakup_02).label(regex='.* protcol.keyword:(.*) > .*', label='$1')\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "45cafd60-8201-11e9-aa3c-e3ebd7744105",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric 1",
+      "visState": "{\"title\":\"Metric 1\",\"type\":\"timelion\",\"params\":{\"expression\":\".sum( .sum(.multiply( .es(q=severity:1, metric=count), 1 ), .multiply( .es(q=severity:2, metric=count),2 ) ), \\n          .sum(.multiply( .es(q=severity:3, metric=count), 3), .multiply( .es(q=severity:4, metric=count),4 ) ) )\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  }
+]

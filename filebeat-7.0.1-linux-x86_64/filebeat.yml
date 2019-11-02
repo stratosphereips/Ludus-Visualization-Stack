@@ -1,0 +1,15 @@
+# remove filebeat old data
+# sudo rm -r data/registry 
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /home/kalin/str/backup/*-brk.json     
+  json.keys_under_root: true
+  json.add_error_key: true
+  json.overwrite_keys: true
+output.logstash:
+  hosts: ["localhost:5624"]
+# output.console:
+#  pretty: true

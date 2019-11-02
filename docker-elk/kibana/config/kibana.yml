@@ -1,0 +1,18 @@
+---
+server.name: kibana
+server.host: "0"
+server.port: 5621
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+vega.enableExternalUrls: true 
+
+
+#xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+### X-Pack 
+elasticsearch.username: elastic
+elasticsearch.password: "s-yR/XJm2NkH>jFwrtx9[g!4K#21*#Yj"
+xpack.xpack_main.telemetry.enabled: false
+xpack.reporting.queue.timeout: 480000
+xpack.reporting.kibanaServer.hostname: kibana
+xpack.reporting.kibanaServer.protocol: http
+xpack.reporting.kibanaServer.port: 5621
