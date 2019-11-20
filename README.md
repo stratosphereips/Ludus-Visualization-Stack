@@ -16,19 +16,20 @@ ludus_viz.py :
 
 ## Starting and Stopping
 
-Run
+Run for first time (if dockers aren't set up - check with ```docker ps```)
+(-bt option specifies the number of minutes for which the data should be backed up - e.g. every 10 minutes)
 ```
-python3 ludus_viz.py --host HOST --db_name DB_NAME --db_username DB_USER --db_password DB_PASS --local_dir DIRECTORY --backup_db_name BACKUP_DB_NAME --backup_db_username BACKUP_DB_USER --backup_db_password BACKUP_DB_PASS --backup_time TIME_IN_MINUTES
+python3 ludus_viz.py -bt 10
 ```
 
-Run continuously 
+Run (if dockers are already setup)
 ```
-nohup python3 ludus_viz.py --host HOST --db_name DB_NAME --db_username DB_USER --db_password DB_PASS --local_dir DIRECTORY --backup_db_name BACKUP_DB_NAME --backup_db_username BACKUP_DB_USER --backup_db_password BACKUP_DB_PASS --backup_time TIME_IN_MINUTES &
+python3 keep_it_running.py -bt 10
 ```
 
 Stop
 
-find process id (PID):
+find process id (PID) of ```ludus_viz.py``` or ```keep_it_running.py```:
 ```
 ps ax | grep ludus_viz.py
 ```
@@ -36,6 +37,7 @@ end process:
 ```
 kill PID
 ```
+repeat finding the PID and killing the process for ```grep filebeat```
 
 ## Configuration
 
@@ -47,9 +49,14 @@ In `/filbeat`
    * logstash: `config/logstash.yml`, `pipeline/logstash.conf`, `Dockerfile`
    * elasticsearch: `config/elasticsearch.yml`, `Dockerfile`
    * kibana: `config/kibana.yml`, `Dockerfile`
+   
+### Manually starting dockers
+```ludus_viz.py``` build and/or starts dockers automatically. However, to manually start them:
+1. in ```/docker-elk/``` run ```docker-compose up``` or ```docker-compose up -d``` for running in the background.
+2. to stop: in ```/docker-elk/``` run ```docker-compose down```
 
 #### Updating the stack
-1. Change ELK_VERSION=7.0.1 in `.env` file
+1. Change ELK_VERSION=7.0.1 in all configuration files to next version of ELK.
 2. Run `docker-compose -f /docker-elk build` in terminal
 
 ## Ludus data format 
@@ -97,16 +104,6 @@ Example of `complete_json` structure after breakup:
     }
 	
 If `"alert": 0`, then `"severity"`, `"category"`, and `"signature"` are nor present.
-
-## Kibana Visualizations
-    dashboards
-
-Client
-Server
-Time Window
-Security: Definition
-Metrics: bayes, weigthed, derivative, integral, PID? 
-Control: what is the mechanism for changing strategies
 
 
 <!--stackedit_data:
