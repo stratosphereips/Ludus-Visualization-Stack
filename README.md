@@ -110,7 +110,7 @@ In `/filbeat`
    * elasticsearch: `config/elasticsearch.yml`, `Dockerfile`
    * kibana: `config/kibana.yml`, `Dockerfile`
    
-### Manually starting dockers
+#### Manually starting dockers
 ```ludus_viz.py``` build and/or starts dockers automatically. However, to manually start them:
 1. in ```/docker-elk/``` run ```docker-compose up``` or ```docker-compose up -d``` for running in the background.
 2. to stop: in ```/docker-elk/``` run ```docker-compose down```
