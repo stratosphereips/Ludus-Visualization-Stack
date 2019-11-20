@@ -29,7 +29,7 @@ my_decrypt.py: decrypts credentials for use by ludus_viz.py
 
 ## Starting and Stopping
 
-#### Run for first time (if dockers aren't set up - check with ```docker ps```)
+#### 1. Run for first time (only run if dockers aren't set up - check with ```docker ps``` before)
 
 -bt option specifies the number of minutes for which the data should be backed up - e.g. every 10 minutes
 ```
@@ -37,13 +37,13 @@ python3 ludus_viz.py -bt 10
 ```
 input ludus key
 
-#### Run (if dockers are already setup)
+#### 2. Run (if dockers are already setup)
 ```
 python3 keep_it_running.py -bt 10
 ```
 input ludus key
 
-#### Stop
+#### 3. Stop
 
 find process id (PID) of ```ludus_viz.py``` or ```keep_it_running.py```:
 ```
