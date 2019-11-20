@@ -28,7 +28,7 @@ The Ludus Visualization Stack uses the [Elastic stack](https://www.elastic.co/) 
 `my_decrypt.py`: decrypts credentials for use by `ludus_viz.py`
 
 ## Setup ssh tunnel
-Before starting `ludus_viz.py` which copies the data from the remote database an ssh tunnel has to be established. 
+Before starting `ludus_viz.py` which copies the data from the remote database, an ssh tunnel has to be established. 
 This is done by `keep_tunnel_open3.py` running by the `cznic` user as such:
 ```
 nohup python3 keep_tunnel_open3.py
