@@ -15,6 +15,7 @@ The Ludus Visualization Stack uses the [Elastic stack](https://www.elastic.co/) 
 ![alt text](https://github.com/xvanov/str/blob/master/ludus.png)
 
 ## Credentials
+ATTENTION! Never git push directly because of possible credentials leakage. Make sure all credentials are never ignored or redacted.
 
 1. cznic user password
 2. ssh key to establish tunnel
