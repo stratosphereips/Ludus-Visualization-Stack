@@ -7,5 +7,5 @@ path.config: /usr/share/logstash/pipeline
 
 xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch:9200" ]
 xpack.monitoring.elasticsearch.username: elastic
-xpack.monitoring.elasticsearch.password: "s-yR/XJm2NkH>jFwrtx9[g!4K#21*#Yj"
+xpack.monitoring.elasticsearch.password: "..."
 
