@@ -102,7 +102,7 @@ repeat finding the PID and killing the process for ```grep filebeat```
 
 ## Configuration
 
-In `/filbeat`
+In `/filebeat`
   * filebeat: filebeat.yml
   
  In `/docker-elk`
