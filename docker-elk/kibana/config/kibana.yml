@@ -10,7 +10,7 @@ vega.enableExternalUrls: true
 
 ### X-Pack 
 elasticsearch.username: elastic
-elasticsearch.password: "s-yR/XJm2NkH>jFwrtx9[g!4K#21*#Yj"
+elasticsearch.password: "..."
 xpack.xpack_main.telemetry.enabled: false
 xpack.reporting.queue.timeout: 480000
 xpack.reporting.kibanaServer.hostname: kibana
