@@ -42,7 +42,7 @@ if __name__ == '__main__':
         except Exception as e:
             print(e)
         
-        report2slack = """curl -F file=@/home/kalin/str/reports/{} -F "initial_comment=Summary Dashboard for last 24 hours" -F channels=DGQA89H19 -F "username=Ludus Notifier" -F "emoji=ludus" -H "Authorization: Bearer xoxp-236321765910-568348310995-805488438214-8588bd66b6ce309cc136c35f5fcae5be" https://slack.com/api/files.upload""".format(fname)
+        report2slack = """curl -F file=@/home/kalin/str/reports/{} -F "initial_comment=Summary Dashboard for last 24 hours" -F channels=DGQA89H19 -F "username=Ludus Notifier" -F "emoji=ludus" -H "Authorization: autorization" https://slack.com/api/files.upload""".format(fname)
         os.system(report2slack)
         
 #        rsp_ips = os.system(cmd_ips)
